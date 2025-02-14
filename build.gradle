@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(23)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
@@ -25,8 +25,8 @@ dependencies {
 	// 1. JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-	// 2. mySQL
-	runtimeOnly 'com.mysql:mysql-connector-j'
+	// 2. PostgreSQL
+	runtimeOnly 'org.postgresql:postgresql'
 
 	// 3. H2 database
 	runtimeOnly 'com.h2database:h2'
@@ -45,7 +45,7 @@ dependencies {
 //	// 7. JWT
 //	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api
 //	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.12.6'
-
+	
 }
 
 tasks.named('test') {
